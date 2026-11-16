@@ -1,0 +1,45 @@
+
+name: Python CI Pipeline
+
+# Trigger the workflow
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+# Define CI job
+jobs:
+  ci:
+    name: Python CI
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout source code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Configure Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Step 4: Run code quality check
+      - name: Run Flake8
+        run: flake8 .
+
+      # Step 5: Run unit tests
+      - name: Run Pytest
+        run: python -m pytest -v
