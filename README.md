@@ -1,6 +1,6 @@
 # Python Calculator CI
 
-[![CI](https://github.com/YOUR_USERNAME/python-calculator-ci/actions/workflows/ci.yml/badge.svg)](https://github.com/JagadeeshaR28/python-calculator-ci/actions/workflows/ci.yml)
+[![CI](https://github.com/JagadeeshaR28/python-calculator-ci/actions/workflows/ci.yml/badge.svg)](https://github.com/JagadeeshaR28/python-calculator-ci/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-TBD-lightgrey.svg)](LICENSE)
 
